@@ -5,26 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>JavaScript Puzzlers</title>
 		<link rel="shortcut icon" href="favicon.ico" />
-		<style>
-			section {
-				margin: 1em;
-			}
-			
-			pre {
-				border: solid 1px grey;
-				border-radius: 10px;
-				background-color: lightgray;
-			}
-			
-			footer {
-				border-top: solid 1px black;
-			}
-			
-			.TestRunner {
-				width: 100%;
-				height: 2em;
-			}
-		</style>
+		<link rel="stylesheet" href="main.css" />
+		<script src="main.js"></script>
 	</head>
 	<body>
 		<header>
@@ -35,24 +17,33 @@
 			<h2>Puzzlers</h2>
 			<article id="WhereIsPushedValue">
 				<h3>Where is pushed value?</h3>
-				<pre>
-						var array = new Array(5);
-						array.push(1);
-						alert(array.length[0] === 1);
-				</pre>
-				<button class="TestRunner">RUN</button>
-				<script>
-					(function () {
-						function arrayTest() {
-							var array = new Array(5);
-							array.push(1);
-							alert(array.length[0] === 1);
-						}
+				<div class="PuzzleContent">
+					<pre>
 
-						var btn = document.querySelector("#WhereIsPushedValue button");
-						btn.addEventListener("click", arrayTest, false);
-					}());
-				</script>
+var array = new Array(5);
+array.push(1);
+alert(array[0] === 1);
+					</pre>
+					<button>RUN</button>
+					<script>
+						jspzl.appendRunner(
+							document.querySelector("#WhereIsPushedValue button"),
+							function () {
+								var array = new Array(5);
+								array.push(1);
+								alert(array[0] === 1);
+							}
+						);
+					</script>
+				</div>
+				<details>
+					<summary>description</summary>
+					<p>
+						Arrayコンストラクタ関数に数値を渡して配列を生成しても，
+						pushされた要素は最後の要素として追加される。
+						上の例の場合，追加された要素はarray[5]に存在する。
+					</p>
+				</details>
 			</article>
 		</section>
 

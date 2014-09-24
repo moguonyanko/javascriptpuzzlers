@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+section {
+	margin: 1em;
+}
+
+article {
+	border: 1px solid whitesmoke;
+	border-radius: 10px;
+	background-color: whitesmoke;
+}
+
+article pre {
+	padding: 0.5em;
+	font-size: 1.2em;
+	border: solid 1px beige;
+	border-radius: 10px;
+	background-color: beige;
+}
+
+details {
+	margin: 1em;
+}
+
+details summary + p {
+	columns: 300px 2;
+	-webkit-columns: 300px 2;
+	-moz-columns: 300px 2;
+	column-gap: 40px;
+	-webkit-column-gap: 40px;
+	-moz-column-gap: 40px;
+	column-rule: double 4px green;
+	-webkit-column-rule: double 4px green;
+	-moz-column-rule: double 4px green;
+}
+
+footer {
+	border-top: solid 1px black;
+}
+
+.PuzzleContent {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
